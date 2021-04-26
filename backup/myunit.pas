@@ -5,10 +5,21 @@ unit MyUnit;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, StdCtrls,
+  ExtCtrls;
 
 type
+
+  { TForm1 }
+
   TForm1 = class(TForm)
+    MainMenu1: TMainMenu;
+    FileItem: TMenuItem;
+    ExitGame: TMenuItem;
+    NewGame: TMenuItem;
+    RulesGame: TMenuItem;
+    procedure Memo1Change(Sender: TObject);
+    procedure NewGameClick(Sender: TObject);
   private
 
   public
@@ -21,6 +32,18 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.Memo1Change(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.NewGameClick(Sender: TObject);
+begin
+  MessageDlg('Новая игра','Игра началась', mtConfirmation, [mbOK],'');
+end;
 
 end.
 
