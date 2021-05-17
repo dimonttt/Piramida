@@ -1,13 +1,23 @@
 object Form1: TForm1
-  Left = 446
-  Height = 329
-  Top = 245
-  Width = 448
+  Left = 564
+  Height = 600
+  Top = 330
+  Width = 1000
   Caption = 'Игровая форма'
+  ClientHeight = 575
+  ClientWidth = 1000
   Color = clGreen
   DesignTimePPI = 120
   Menu = MainMenu1
+  OnCreate = FormCreate
   LCLVersion = '2.0.10.0'
+  object Image1: TImage
+    Left = 112
+    Height = 121
+    Top = 56
+    Width = 88
+    OnClick = Image1Click
+  end
   object MainMenu1: TMainMenu
     Left = 24
     Top = 32
@@ -19,6 +29,7 @@ object Form1: TForm1
       end
       object ExitGame: TMenuItem
         Caption = 'Выход'
+        OnClick = ExitGameClick
       end
       object RulesGame: TMenuItem
         Caption = 'Правила игры'
