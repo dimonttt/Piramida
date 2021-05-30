@@ -26,8 +26,8 @@ type
     procedure Memo1Change(Sender: TObject);
     procedure NewGameClick(Sender: TObject);
   private
-    Images : array[1..5] of TImage;
-    IsSelected : array[1..5] of boolean;
+    Images : array[1..52] of TImage;
+    IsSelected : array[1..52] of boolean;
   public
 
   end;
@@ -54,7 +54,7 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 var i:integer;
 begin
-  for i:=1 to 5 do
+  for i:=1 to 52 do
   begin
     IsSelected[i]:=false;
     Images[i]:=TImage.Create(Self);

@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 289
+  Left = 154
   Height = 600
-  Top = 159
+  Top = 205
   Width = 1000
   Caption = 'Игровая форма'
   ClientHeight = 575
@@ -12,9 +12,9 @@ object Form1: TForm1
   OnCreate = FormCreate
   LCLVersion = '2.0.10.0'
   object Image1: TImage
-    Left = 144
+    Left = 176
     Height = 121
-    Top = 64
+    Top = 80
     Width = 88
     OnClick = Image1Click
   end
