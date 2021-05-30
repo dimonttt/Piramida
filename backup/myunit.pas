@@ -79,7 +79,7 @@ begin
      if (IsSelected[num]) then
         Images[num].Picture.LoadFromFile('pic'+IntToStr(num)+'select.png')
      else
-         Images[num].Picture.LoadFromFile('pic'+IntToStr(num)+'.png');
+        Images[num].Picture.LoadFromFile('pic'+IntToStr(num)+'.png');
 end;
 
 procedure TForm1.NewGameClick(Sender: TObject);
