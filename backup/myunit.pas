@@ -14,6 +14,7 @@ type
 
   TForm1 = class(TForm)
     Image1: TImage;
+    Image2: TImage;
 
     MainMenu1: TMainMenu;
     FileItem: TMenuItem;
@@ -23,6 +24,7 @@ type
     procedure ExitGameClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Image1Click(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
     procedure Memo1Change(Sender: TObject);
     procedure NewGameClick(Sender: TObject);
   private
@@ -76,16 +78,19 @@ end;
 
 procedure TForm1.Image1Click(Sender: TObject);
 var num :integer;
-    i:integer;
-    s:string;
+
 begin
-  s:='./pic'+IntToStr(i)+'.bmp';
      num := TImage(Sender).Tag;
      IsSelected[num]:=not IsSelected[num];
      if (IsSelected[num]) then
-        Images[num].Picture.LoadFromFile(s+'select.png')
+        Images[num].Picture.LoadFromFile('./pic'+IntToStr(num)+'select.bmp')
      else
-        Images[num].Picture.LoadFromFile(s);
+        Images[num].Picture.LoadFromFile('./pic'+IntToStr(num)+'.bmp');
+end;
+
+procedure TForm1.Image2Click(Sender: TObject);
+begin
+
 end;
 
 procedure TForm1.NewGameClick(Sender: TObject);
