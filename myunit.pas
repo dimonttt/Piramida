@@ -54,7 +54,7 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 var i:integer;
 begin
-  for i:=1 to 52 do
+  for i:=1 to 28 do
   begin
     IsSelected[i]:=false;
     Images[i]:=TImage.Create(Self);
@@ -66,6 +66,7 @@ begin
     Images[i].Visible:= true;
     Images[i].Tag:=i;
     Images[i].Picture.LoadFromFile('pic'+IntToStr(i)+'.png');
+    Caption:=ExtractFilePath(Application.ExeName);
     Images[i].OnClick:=@Image1Click;
   end;
 end;
