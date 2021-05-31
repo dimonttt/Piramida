@@ -53,6 +53,7 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 var i:integer;
+    s:string;
 begin
   for i:=1 to 28 do
   begin
@@ -64,8 +65,10 @@ begin
     Images[i].Left:=(i mod 5)*150;
     Images[i].Top:=(i div 5)*50;
     Images[i].Visible:= true;
+    Images[i].Stretch:=true;
     Images[i].Tag:=i;
-    Images[i].Picture.LoadFromFile('pic'+IntToStr(i)+'.png');
+    s:='./pic'+IntToStr(i)+'.bmp';
+    Images[i].Picture.LoadFromFile(s);
     Caption:=ExtractFilePath(Application.ExeName);
     Images[i].OnClick:=@Image1Click;
   end;
@@ -73,14 +76,16 @@ end;
 
 procedure TForm1.Image1Click(Sender: TObject);
 var num :integer;
-
+    i:integer;
+    s:string;
 begin
+  s:='./pic'+IntToStr(i)+'.bmp';
      num := TImage(Sender).Tag;
      IsSelected[num]:=not IsSelected[num];
      if (IsSelected[num]) then
-        Images[num].Picture.LoadFromFile('pic'+IntToStr(num)+'select.png')
+        Images[num].Picture.LoadFromFile(s+'select.png')
      else
-        Images[num].Picture.LoadFromFile('pic'+IntToStr(num)+'.png');
+        Images[num].Picture.LoadFromFile(s);
 end;
 
 procedure TForm1.NewGameClick(Sender: TObject);
