@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 301
-  Height = 764
-  Top = 162
+  Left = 147
+  Height = 791
+  Top = 54
   Width = 1000
   Caption = 'Игровая форма'
-  ClientHeight = 739
+  ClientHeight = 766
   ClientWidth = 1000
   Color = clGreen
   DesignTimePPI = 120
@@ -14,14 +14,14 @@ object Form1: TForm1
   object Image1: TImage
     Left = 176
     Height = 121
-    Top = 80
+    Top = 104
     Width = 88
     OnClick = Image1Click
   end
   object Image2: TImage
     Left = 176
     Height = 121
-    Top = 600
+    Top = 592
     Width = 88
     OnClick = Image2Click
     Picture.Data = {
